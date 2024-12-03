@@ -17,7 +17,9 @@ import androidx.compose.ui.unit.sp
 import com.example.facialfeatures.R
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+    onNavigateToSkinSurvey: () -> Unit,
+    onNavigateToScanUpload: () -> Unit) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         content = { innerPadding ->
@@ -42,7 +44,7 @@ fun HomeScreen() {
 
                 // Scan or Upload Button
                 Button(
-                    onClick = { /* No functionality yet */ },
+                    onClick = onNavigateToScanUpload,
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(56.dp),
@@ -76,7 +78,7 @@ fun HomeScreen() {
                 ) {
                     // Skin Type Button
                     Button(
-                        onClick = { /* No functionality yet */ },
+                        onClick = onNavigateToSkinSurvey,
                         modifier = Modifier
                             .weight(1f)
                             .height(80.dp)
