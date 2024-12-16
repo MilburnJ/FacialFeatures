@@ -37,15 +37,14 @@ fun AppNavGraph(navController: NavHostController) {
             )
         }
         composable("upload") {
-            UploadScreen(onNavigateBack = { navController.popBackStack() })
+            UploadScreen(navController = navController, onNavigateBack = { navController.popBackStack() })
         }
         composable("scan") {
             ScanScreen(onNavigateToResult = { navController.navigate("result")},
                 onNavigateBack = { navController.popBackStack()} )
         }
         composable("result") {
-            ResultScreen(onNavigateBack = { navController.popBackStack() })
-        }
+            ResultScreen(navController = navController)        }
 
     }
 
