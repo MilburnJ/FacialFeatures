@@ -34,7 +34,7 @@ fun HomeScreen(
 
                 // Greeting Text
                 Text(
-                    text = "Hi XXXXXXXX",
+                    text = "Hi Amar",
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 20.sp),
                     color = Color.Black,
                     modifier = Modifier.align(Alignment.Start)

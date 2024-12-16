@@ -28,7 +28,7 @@ fun AppNavGraph(navController: NavHostController) {
             )
         }
         composable("skinSurvey") {
-            SkinSurveyScreen(onNavigateBack = { navController.popBackStack() })
+            SkinSurveyScreen(navController = navController,onNavigateBack = { navController.popBackStack() })
         }
         composable("scanUpload") {
             ScanUploadScreen(
