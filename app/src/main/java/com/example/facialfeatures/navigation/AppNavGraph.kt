@@ -10,6 +10,7 @@ import com.example.facialfeatures.ui.screens.ScanUploadScreen
 import com.example.facialfeatures.ui.screens.SkinSurveyScreen
 import com.example.facialfeatures.ui.screens.UploadScreen
 import com.example.facialfeatures.ui.screens.ScanScreen
+import com.example.facialfeatures.ui.screens.ResultScreen
 
 @Composable
 fun AppNavGraph(navController: NavHostController) {
@@ -39,7 +40,11 @@ fun AppNavGraph(navController: NavHostController) {
             UploadScreen(onNavigateBack = { navController.popBackStack() })
         }
         composable("scan") {
-            ScanScreen(onNavigateBack = { navController.popBackStack() })
+            ScanScreen(onNavigateToResult = { navController.navigate("result")},
+                onNavigateBack = { navController.popBackStack()} )
+        }
+        composable("result") {
+            ResultScreen(onNavigateBack = { navController.popBackStack() })
         }
 
     }
